@@ -17,9 +17,10 @@
 
 /* Basic CSS */
 
-.page {
+body {
   font-family: var(--main-fonts);
   color: var(--main-color);
+  letter-spacing: 0.03em;
 }
 
 .link {
@@ -45,7 +46,6 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .logo-accent {
@@ -75,7 +75,6 @@
 .header-contact-link:focus,
 .header-contact-link:hover {
   color: var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* Main */
@@ -105,24 +104,38 @@
   color: var(--white-color);
 }
 
+.hero-btn:focus,
+.hero-btn:hover {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 /* About */
 
-.about-item {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .about-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .about-text {
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--text-color);
 }
 
@@ -133,7 +146,6 @@
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 /* Team */
@@ -147,7 +159,10 @@
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
+}
+
+.team-list-item {
+  background-color: var(--white-color);
 }
 
 .team-list-title {
@@ -155,14 +170,12 @@
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team-list-text {
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--text-color);
 }
 
@@ -177,7 +190,6 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.92;
-  letter-spacing: 0.03em;
   color: var(--white-color);
 }
 
@@ -185,7 +197,6 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--white-color);
 }
 
@@ -193,7 +204,6 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -202,17 +212,16 @@
 .address-link:focus,
 .address-link:hover {
   color: var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* Portfolio */
 
 .portfolio-list-btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  letter-spacing: 0.03em;
   background-color: var(--background-white-color);
   border-radius: 4px;
   cursor: pointer;
@@ -234,6 +243,5 @@
 .card-text {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
   color: var(--text-color);
 }
